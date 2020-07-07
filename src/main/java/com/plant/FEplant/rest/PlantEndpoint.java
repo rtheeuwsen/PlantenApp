@@ -14,7 +14,7 @@ public class PlantEndpoint {
 	}
 	
 	@GetMapping("/plant2")
-	public Plant uitproberen() {
+	public Plant uitproberen2() {
 		System.out.println("Hij doet functie2");
 		return new Plant();
 	}
