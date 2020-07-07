@@ -2,6 +2,8 @@ package com.plant.FEplant.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.plant.FEplant.controller.TimerService;
@@ -18,6 +20,13 @@ public class TimerEndpoint {
 	public Iterable<Timer> uitproberenalle() {
 		return timerservice.test();
 	}
+	
+	@PostMapping("/TimerInvoer")
+	  public void voegTToe(@RequestBody Timer timer) {
+		timerservice.voerEenTimerIn(timer);
+	}
+	
+	
 	
 	@GetMapping("/Timer")
 

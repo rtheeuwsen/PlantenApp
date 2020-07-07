@@ -18,4 +18,9 @@ public class TimerService {
 		Iterable<Timer> timers = timerrepository.findAll();
 		return timers;
 	}
+
+	public void voerEenTimerIn(Timer timer) {
+		timerrepository.save(timer);
+		
+	}
 }
